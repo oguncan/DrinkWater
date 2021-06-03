@@ -31,6 +31,6 @@ You can also tracker water history, reach your daily goal to open the respective
 </tr></table>
 
 <table><tr>
-<td><img src="https://github.com/oguncan/umessage/blob/master/umessageImages/9.jpg" width="100%"/> </td>
+<td><img src="https://github.com/oguncan/DrinkWater/blob/master/waterPicture/water9.png" width="50%"/> </td>
 </tr></table>
 
