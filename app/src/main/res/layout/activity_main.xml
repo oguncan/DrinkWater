@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/blue400"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/homeActivityToolbar"
+        android:layout_width="match_parent"
+        android:background="@color/blue400"
+        android:layout_height="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:elevation="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+<!--    <FrameLayout-->
+<!--        android:id="@+id/fragmentContainer"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"/>-->
+
+    <TextView
+        android:id="@+id/homeActivityTodayDateText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/homeActivityToolbar"
+        android:text=""
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:textSize="18sp"
+        android:textAlignment="center"/>
+
+    <TextView
+        android:id="@+id/homeActivityCallNameText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/homeActivityTodayDateText"
+        android:text=""
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:textSize="18sp"
+        android:textAlignment="center"/>
+
+
+    <at.grabner.circleprogress.CircleProgressView
+        android:id="@+id/waterDrinkProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="32dp"
+        app:cpv_autoTextSize="false"
+        app:cpv_barColor="@color/white"
+        app:cpv_barWidth="15dp"
+        app:cpv_innerContourSize="0dp"
+        app:cpv_maxValue="100"
+        app:cpv_outerContourSize="0dp"
+        app:cpv_rimColor="@color/blue100"
+        app:cpv_rimWidth="15dp"
+        app:cpv_spinColor="@color/blue700"
+        app:layout_constraintTop_toBottomOf="@id/homeActivityCallNameText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/addDrinkAmountButton"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="@id/waterDrinkProgressBar"
+        app:layout_constraintEnd_toEndOf="@id/waterDrinkProgressBar"
+        app:layout_constraintTop_toTopOf="@id/waterDrinkProgressBar"
+        app:layout_constraintBottom_toBottomOf="@id/waterDrinkProgressBar"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/drinkWaterPercentText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text=""
+            android:textAlignment="center"
+            android:textSize="52sp"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:id="@+id/drinkWaterRatioText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="18sp"
+            android:textColor="@color/white"/>
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/addDrinkAmountButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="36dp"
+        android:src="@drawable/ic_add"
+        android:scaleType="centerInside"
+        android:background="@drawable/drawable_add_drink_button"/>
+
+    <ImageView
+        android:id="@+id/drankWaterLogButton"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@drawable/glass"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toStartOf="@id/addDrinkAmountButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/addDrinkAmountButton"
+        app:layout_constraintTop_toTopOf="@id/addDrinkAmountButton"/>
+
+    <ImageView
+        android:id="@+id/addDrinkWaterAdditionalSettings"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@drawable/settings"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toEndOf="@id/addDrinkAmountButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/addDrinkAmountButton"
+        app:layout_constraintTop_toTopOf="@id/addDrinkAmountButton"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

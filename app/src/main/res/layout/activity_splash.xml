@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.SplashActivity">
+
+    <ImageView
+        android:id="@+id/splash_img_logo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/ic_drop_active"
+        android:layout_centerInParent="true"/>
+
+    <TextView
+        android:layout_margin="16dp"
+        android:layout_width="0dp"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/splash_img_logo"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="208dp"
+        android:textAlignment="center"
+        android:text="Drink Water"
+        android:textColor="@color/black" />
+
+</RelativeLayout>

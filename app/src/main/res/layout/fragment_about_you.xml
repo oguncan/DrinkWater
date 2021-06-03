@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/drawable_intro_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.intro.AboutYouFragment">
+
+    <TextView
+        android:id="@+id/fragmentAboutYouTitle"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/about_you"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/fragmentAboutYouDesc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="@id/fragmentAboutYouTitle"
+        app:layout_constraintEnd_toEndOf="@id/fragmentAboutYouTitle"
+        app:layout_constraintTop_toBottomOf="@id/fragmentAboutYouTitle"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/tell_us_about_yourself"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:textSize="16sp"/>
+
+    <LinearLayout
+        android:id="@+id/fragmentAboutYouImagesLayout"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="@id/fragmentAboutYouDesc"
+        app:layout_constraintTop_toBottomOf="@id/fragmentAboutYouDesc"
+        app:layout_constraintEnd_toEndOf="@id/fragmentAboutYouDesc">
+
+
+        <ImageView
+            android:id="@+id/fragmentAboutWomanGen"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_margin="12dp"
+            android:src="@drawable/woman"/>
+
+        <ImageView
+            android:id="@+id/fragmentAboutManGen"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_margin="12dp"
+            android:src="@drawable/man"/>
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/fragmentAboutDateLayout"
+        android:background="@drawable/drawable_about_borderline"
+        android:layout_margin="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/fragmentAboutYouImagesLayout"
+        app:layout_constraintEnd_toEndOf="@id/fragmentAboutYouImagesLayout"
+        app:layout_constraintTop_toBottomOf="@id/fragmentAboutYouImagesLayout">
+
+        <ImageView
+            android:id="@+id/fragmentAboutYouCalendarImageView"
+            android:src="@drawable/ic_calendar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:padding="12dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/date_of_birth"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintStart_toEndOf="@id/fragmentAboutYouCalendarImageView"
+            app:layout_constraintBottom_toBottomOf="@id/fragmentAboutYouCalendarImageView"
+            app:layout_constraintTop_toTopOf="@id/fragmentAboutYouCalendarImageView" />
+
+        <TextView
+            android:id="@+id/fragmentAboutTextBirthDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/select_your_date_of_birth"
+            android:textColor="@color/tab_indicator_gray"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/fragmentAboutYouCalendarImageView"
+            app:layout_constraintTop_toTopOf="@id/fragmentAboutYouCalendarImageView" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/fragmentAboutNameLayout"
+        android:background="@drawable/drawable_about_borderline"
+        android:layout_margin="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/fragmentAboutYouImagesLayout"
+        app:layout_constraintEnd_toEndOf="@id/fragmentAboutYouImagesLayout"
+        app:layout_constraintTop_toBottomOf="@id/fragmentAboutDateLayout">
+
+        <TextView
+            android:id="@+id/fragmentAboutNameTextDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/name"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:padding="12dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <TextView
+            android:id="@+id/fragmentAboutTextName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/enter_your_name"
+            android:textColor="@color/tab_indicator_gray"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/fragmentAboutNameTextDesc"
+            app:layout_constraintTop_toTopOf="@id/fragmentAboutNameTextDesc" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

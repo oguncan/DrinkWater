@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/drawable_intro_background"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.IntroActivity">
+
+    <!-- <com.ocktr.drinkwater.views.CustomViewPager
+
+        android:id="@+id/introViewPager"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/introStepImages"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+        -->
+
+    <FrameLayout
+        android:id="@+id/introFragmentContainer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/introStepImages"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+
+    <TextView
+        android:id="@+id/introBackButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/introNextButton"
+        android:layout_marginStart="16dp"
+        android:textSize="16sp"
+        android:visibility="gone"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/introNextButton"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:drawableEnd="@drawable/ic_right"
+        android:id="@+id/introNextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:textSize="14sp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/next"
+        android:background="@drawable/drawable_next_button"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/introStepImages"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:weightSum="3"
+        app:layout_constraintBottom_toTopOf="@+id/introNextButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:tabBackground="@drawable/drawable_indicator_selector">
+
+        <RelativeLayout
+            android:layout_weight="1"
+            android:id="@+id/firstIntroLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/firstIntroImageView"
+                android:src="@drawable/ic_drop_active"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"/>
+            <TextView
+                android:id="@+id/firstIntroTextView"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:layout_alignLeft="@id/firstIntroImageView"
+                android:layout_alignRight="@id/firstIntroImageView"
+                android:layout_alignTop="@id/firstIntroImageView"
+                android:layout_alignBottom="@id/firstIntroImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:textSize="18sp"/>
+        </RelativeLayout>
+
+        <include
+            layout="@layout/layout_indicator_design"/>
+
+        <RelativeLayout
+            android:layout_weight="1"
+            android:id="@+id/secondIntroLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/secondIntroImageView"
+                android:src="@drawable/ic_drop_inactive"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"/>
+            <TextView
+                android:id="@+id/secondIntroTextView"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:layout_alignLeft="@id/secondIntroImageView"
+                android:layout_alignRight="@id/secondIntroImageView"
+                android:layout_alignTop="@id/secondIntroImageView"
+                android:layout_alignBottom="@id/secondIntroImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2"
+                android:textSize="18sp"/>
+        </RelativeLayout>
+
+        <include
+            layout="@layout/layout_indicator_design"/>
+
+        <RelativeLayout
+            android:layout_weight="1"
+            android:id="@+id/thirdIntroLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/thirdIntroImageView"
+                android:src="@drawable/ic_drop_inactive"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"/>
+
+            <TextView
+                android:id="@+id/thirdIntroTextView"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:layout_alignLeft="@id/thirdIntroImageView"
+                android:layout_alignRight="@id/thirdIntroImageView"
+                android:layout_alignTop="@id/thirdIntroImageView"
+                android:layout_alignBottom="@id/thirdIntroImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3"
+                android:textSize="18sp"/>
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

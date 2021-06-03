@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/drawable_intro_background"
+    tools:context=".fragments.intro.WeightFragment">
+
+
+    <TextView
+        android:id="@+id/fragmentWeightTextTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/what_is_your_weight"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/fragmentWeightTextDesc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/fragmentWeightTextDesc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/enter_your_weight_to_calculate"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/fragmentWeightImageAndTextLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@id/fragmentWeightTextTitle"
+        app:layout_constraintTop_toBottomOf="@+id/fragmentWeightTextTitle" />
+
+
+    <LinearLayout
+        android:id="@+id/fragmentWeightImageAndTextLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginTop="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/fragmentWeightScalePicker"
+        app:layout_constraintEnd_toEndOf="@id/fragmentWeightTextDesc"
+        app:layout_constraintStart_toStartOf="@id/fragmentWeightTextDesc"
+        app:layout_constraintTop_toBottomOf="@+id/fragmentWeightTextDesc">
+
+        <TextView
+            android:id="@+id/fragmentWeightTextWeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:text="0"
+            android:textColor="@color/white"
+            android:textSize="36sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/scale" />
+
+    </LinearLayout>
+
+
+    <com.zjun.widget.RuleView
+        android:id="@+id/fragmentWeightScalePicker"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="32dp"
+        app:zjun_bgColor="@color/blue100"
+        app:zjun_textColor="@color/white"
+        app:zjun_indicatorLineColor="@color/blue900"
+        app:zjun_indicatorLineWidth="4dp"
+        app:zjun_gradationColor="@color/blue900"
+        app:gv_minValue="30"
+        app:gv_maxValue="200"
+        app:zjun_textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@id/fragmentWeightImageAndTextLayout"
+        app:layout_constraintStart_toStartOf="@id/fragmentWeightImageAndTextLayout"
+        app:layout_constraintTop_toBottomOf="@+id/fragmentWeightImageAndTextLayout"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

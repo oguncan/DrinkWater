@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">DrinkWater</string>
+    <string name="next">İlerle</string>
+    <string name="date_of_birth">Date of birth</string>
+    <string name="select_your_date_of_birth">Select your date of birth</string>
+    <string name="the_name_field_cannot_be_empty">The name field cannot be empty.</string>
+    <string name="what_is_your_day_look_like">What\'s your day look like?</string>
+    <string name="your_daily_habits_will_tell_us">Your daily habits will tell us when you receive a notification</string>
+</resources>

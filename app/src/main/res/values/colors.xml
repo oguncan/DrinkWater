@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary Colors -->
+    <color name="colorPrimay">#FFFFFF</color>
+    <color name="colorAccent">#FFFFFF</color>
+    <color name="colorPrimaryDark">#FFFFFF</color>
+
+    <!-- General Colors -->
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+
+    <!-- General App Colors -->
+    <color name="blue100">#82A3E6</color>
+    <color name="blue200">#769BE6</color>
+    <color name="blue300">#6089DC</color>
+    <color name="blue400">#537FD8</color>
+    <color name="blue500">#4B7BDC</color>
+    <color name="blue600">#3B6FDA</color>
+    <color name="blue700">#2D64D5</color>
+    <color name="blue800">#1A56D1</color>
+    <color name="blue900">#0948CA</color>
+
+    <!-- Colors for tab and screen Text -->
+    <color name="tab_indicator_gray">#CAC9C9</color>
+    <color name="intro_description_color">#656565</color>
+    <color name="coffee_background">#88570C</color>
+    <color name="tea_background">#31AE5A</color>
+    <color name="milk_background">#89898A</color>
+    <color name="fruit_background">#BF3F36</color>
+    <color name="soda_background">#7438DF</color>
+    <color name="water_background">@color/blue100</color>
+
+
+</resources>

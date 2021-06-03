@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:id="@+id/layoutProfileWeight"
+    android:background="@color/blue900"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/layoutProfileWeightTextTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/what_is_your_weight"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/fragmentWeightTextDesc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/layoutProfileWeightTextDesc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/enter_your_weight_to_calculate"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/fragmentWeightImageAndTextLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@id/layoutProfileWeightTextTitle"
+        app:layout_constraintTop_toBottomOf="@+id/layoutProfileWeightTextTitle" />
+
+
+    <LinearLayout
+        android:id="@+id/layoutProfileWeightImageAndTextLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginTop="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/fragmentWeightScalePicker"
+        app:layout_constraintEnd_toEndOf="@id/layoutProfileWeightTextDesc"
+        app:layout_constraintStart_toStartOf="@id/layoutProfileWeightTextDesc"
+        app:layout_constraintTop_toBottomOf="@+id/layoutProfileWeightTextDesc">
+
+        <TextView
+            android:id="@+id/layoutProfileWeightTextWeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:text="0"
+            android:textColor="@color/white"
+            android:textSize="36sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/scale" />
+
+    </LinearLayout>
+
+
+    <com.zjun.widget.RuleView
+        android:id="@+id/layoutProfileWeightScalePicker"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="16dp"
+        app:zjun_bgColor="@color/blue100"
+        app:zjun_textColor="@color/white"
+        app:zjun_indicatorLineColor="@color/blue900"
+        app:zjun_indicatorLineWidth="4dp"
+        app:zjun_gradationColor="@color/blue900"
+        app:gv_minValue="30"
+        app:gv_maxValue="200"
+        app:zjun_textSize="18sp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="@id/layoutProfileWeightImageAndTextLayout"
+        app:layout_constraintStart_toStartOf="@id/layoutProfileWeightImageAndTextLayout"
+        app:layout_constraintTop_toBottomOf="@+id/layoutProfileWeightImageAndTextLayout"
+        />
+
+    <Button
+        android:id="@+id/layoutProfileWeightOKButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ok"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/layoutProfileWeightScalePicker"
+        app:layout_constraintStart_toStartOf="@id/layoutProfileWeightScalePicker"
+        app:layout_constraintEnd_toEndOf="@id/layoutProfileWeightScalePicker"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/drawable_next_button"
+        android:layout_marginBottom="16dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

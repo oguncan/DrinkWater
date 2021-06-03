@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:id="@+id/bottomSheetDialogContainer">
+
+   <include
+       layout="@layout/layout_scroll_drink"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_weight="4">
+
+        <Button
+            android:layout_weight="1"
+            android:id="@+id/layoutAddDrink150ml"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_150_ml"
+            android:background="@color/blue100"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:layout_marginHorizontal="4dp"/>
+
+        <Button
+            android:layout_weight="1"
+            android:id="@+id/layoutAddDrink200ml"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_200_ml"
+            android:background="@color/blue100"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:layout_marginHorizontal="4dp"/>
+
+        <Button
+            android:layout_weight="1"
+            android:id="@+id/layoutAddDrink250ml"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_250_ml"
+            android:background="@color/blue100"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:layout_marginHorizontal="4dp" />
+
+        <Button
+            android:layout_weight="1"
+            android:id="@+id/layoutAddDrink300ml"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_300_ml"
+            android:background="@color/blue100"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:layout_marginHorizontal="4dp" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_marginTop="16dp"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <NumberPicker
+            android:id="@+id/layoutAddDrinkDialogNumberPicker"
+            android:theme="@style/MyAppTheme.NumberPicker"
+            android:elevation="10dp"
+            android:layout_width="125dp"
+            android:layout_height="wrap_content" />
+
+
+        <TextView
+            android:layout_marginStart="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="ml"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:gravity="center_vertical"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/layoutAddDrinkDialogOKButton"
+        android:layout_marginTop="16dp"
+        android:layout_gravity="center"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_check"
+        android:padding="16dp"
+        android:background="@drawable/drawable_drink_tea_background"/>
+
+
+    <LinearLayout
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_width="match_parent"
+        android:weightSum="2"
+        android:layout_height="wrap_content">
+
+
+        <Button
+            android:id="@+id/layoutAddDrinkDialogDateButton"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_black_calendar"
+            android:textSize="18sp"
+            android:background="@android:color/transparent"
+            android:text="Date" />
+
+        <Button
+            android:id="@+id/layoutAddDrinkDialogTimeButton"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_black_time"
+            android:textSize="18sp"
+            android:background="@android:color/transparent"
+            android:text="Time"
+            />
+
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>
